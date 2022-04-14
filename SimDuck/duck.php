@@ -5,6 +5,7 @@ require_once 'quackbehavior.php';
 abstract class Duck {
     protected $flyBehavior;
     protected $quackBehavior;
+    protected $class;
 
     abstract public function display();
 
@@ -16,6 +17,10 @@ abstract class Duck {
     }
     public function performQuack() {
         $this->quackBehavior->quack_1();
+    }
+
+    public function setFlyBehavior($newFlyBehavior) {
+        $this->flyBehavior = $newFlyBehavior;
     }
 }
 ?>
